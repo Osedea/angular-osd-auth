@@ -1,6 +1,6 @@
 {
   "name": "angular-osd-auth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/Osedea/angular-osd-auth",
   "main": "angular-osd-auth.js",
   "authors": [
@@ -15,6 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.4.0"
+    "angular": ">1.2.0"
   }
 }

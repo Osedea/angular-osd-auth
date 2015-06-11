@@ -1,6 +1,6 @@
 {
   "name": "angular-osd-auth",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An angular module to authenticate an user using $http.",
   "main": "angular-osd-auth.js",
   "scripts": {
