@@ -19,7 +19,7 @@ angular.module(
             'app',
             [
                 ...,
-                'osdResource',
+                'osdAuth',
             ]
     )
 ```
