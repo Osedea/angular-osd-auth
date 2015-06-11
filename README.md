@@ -27,6 +27,7 @@ angular.module(
 Include a script tag (or add it to whatever you use to compile your js):
 ```html
 <script src="path/to/bower_components/angular-osd-auth/angular-osd-auth.min.js"></script>
+```
 
 ### Configuration
 
@@ -37,7 +38,7 @@ URL default to:
 
 You can change each url using the config provider:
 
-```
+```js
 (function() {
 
     // @ngInject
@@ -54,7 +55,7 @@ You can change each url using the config provider:
 
 Also, this library assumes that you are injecting a constant from your backend to angular for the current logged in user. The constant is assumed to be named *CURRENT_USER*. You can change the name of the constant or simply use a request to query the current logged in user.
 
-```
+```js
 (function() {
 
     // @ngInject
@@ -74,7 +75,7 @@ Also, this library assumes that you are injecting a constant from your backend t
 
 This service exposes these methods
 
-```
+```js
 OsdAuth.login(credentials) // Login a user
 OsdAuth.logout()           // Logout the current user
 OsdAuth.register(data)     // Register a user
@@ -82,7 +83,7 @@ OsdAuth.register(data)     // Register a user
 
 You can use it this way:
 
-```
+```js
 (function() {
 
     // @ngInject
@@ -114,14 +115,14 @@ You can use it this way:
 
 #### OsdAuthUser
 
-```
+```js
 OsdAuthUser.getUser()               // Returns the current logged in user
 OsdAuthUser.setUser(newUser)        // New user data
 OsdAuthUser.isAuthenticated()       // Whether or not a user is set
 OsdAuthUser.isAuthorized(resources) // Whether or not a user is authorized for a resource
 ```
 
-```
+```js
 (function() {
 
     // @ngInject
