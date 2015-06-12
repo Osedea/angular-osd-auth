@@ -8,14 +8,12 @@
         self.login = function (credentials) {
             return $q.when($http.post(OsdAuthConfig.config.login, credentials))
                 .then(
-                    function (response) {
+                    function loginSuccess(response) {
                         $rootScope.$broadcast('osdauth-login-success');
 
                         return OsdAuthUser.setUser(response.data).getUser();
-                    }
-                )
-                .catch(
-                    function (error) {
+                    },
+                    function loginError(error) {
                         $rootScope.$broadcast('osdauth-login-error', error.data);
 
                         throw error;
@@ -26,14 +24,12 @@
         self.logout = function () {
             return $q.when($http.post(OsdAuthConfig.config.logout))
                 .then(
-                    function () {
+                    function logoutSuccess() {
                         $rootScope.$broadcast('osdauth-logout-success');
 
                         return OsdAuthUser.setUser(null).getUser();
-                    }
-                )
-                .catch(
-                    function (error) {
+                    },
+                    function logoutError(error) {
                         $rootScope.$broadcast('osdauth-logout-error', error.data);
 
                         throw error;
@@ -44,14 +40,12 @@
         self.register = function (data) {
             return $q.when($http.post(OsdAuthConfig.config.register, data))
                 .then(
-                    function (response) {
+                    function registerSuccess(response) {
                         $rootScope.$broadcast('osdauth-register-success');
 
                         return OsdAuthUser.setUser(response.data).getUser();
-                    }
-                )
-                .catch(
-                    function (error) {
+                    },
+                    function registerError(error) {
                         $rootScope.$broadcast('osdauth-register-error', error.data);
 
                         throw error;
