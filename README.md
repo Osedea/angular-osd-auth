@@ -3,7 +3,7 @@
 This module provides an easy way to authenticate users using $http service in angular.
 
 ### Version
-0.1.0
+0.1.1
 
 ### Installation and Setup
 
